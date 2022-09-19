@@ -1,7 +1,7 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import cvelement
 
 
 def cvsite(request):
-    return render(request, 'portfolio/homepage.html')
+    cvelements = cvelement.objects.all()
+    return render(request, 'portfolio/homepage.html', {'cvelements': cvelements})
