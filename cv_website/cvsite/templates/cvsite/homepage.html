@@ -12,8 +12,10 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cvsite/style.css' %}">
     <title>Homepage CV website</title>
+
   </head>
 
   <body>
@@ -21,7 +23,7 @@
     <nav class="navbar bg-light sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" style="color: rgb(0, 0, 0);" href="{% url 'home' %}">
-          {% load static %}
+          <!-- {% load static %} -->
           <img
             src="{% static 'cvsite/logo.png' %}"
             alt=""
