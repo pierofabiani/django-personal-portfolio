@@ -12,8 +12,45 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+
+    <!-- Importare file CSS statici -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}" />
   </head>
   <body>
-    <h1>Contatti</h1>
+    <nav class="navbar bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="color: rgb(0, 0, 0)" href="#">
+          <img
+            src="https://www.nicepng.com/png/full/440-4408335_logo-clip-art-royalty-free-logos-png.png"
+            alt=""
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top mx-3"
+          />
+          Dwight Schrute
+        </a>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a
+            class="btn btn-primary me-md-2"
+            type="button"
+            href="{% url 'home' %}"
+            >Homepage</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Titolo pagina -->
+    <div class="container text-center my-5">
+      <h1 id="titolone">Contatti</h1>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        {% for cvelement in cvelements %}
+        <div class="col">{{ cvelement.nome }}</div>
+        {% endfor %}
+      </div>
+    </div>
   </body>
 </html>
