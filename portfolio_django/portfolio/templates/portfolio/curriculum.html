@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}" />
+  </head>
+  <nav class="navbar bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: rgb(0, 0, 0)" href="#">
+        <img
+          src="https://www.nicepng.com/png/full/440-4408335_logo-clip-art-royalty-free-logos-png.png"
+          alt=""
+          width="30"
+          height="24"
+          class="d-inline-block align-text-top mx-3"
+        />
+        Dwight Schrute
+      </a>
+      <div style="display: flex">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a
+            class="btn btn-secondary me-md-2"
+            type="button"
+            href="{% url 'contatti' %}"
+            >Contatti</a
+          >
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a
+            class="btn btn-secondary me-md-2"
+            type="button"
+            href="{% url 'curriculum' %}"
+            >Curriculum</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="bg-primary bg-gradient text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 text-left text-md-center mb-3">
+          <img
+            class="rounded-circle img-fluid"
+            src="https://static.wikia.nocookie.net/theoffice/images/c/c5/Dwight_.jpg/revision/latest?cb=20170701082424"
+            alt="Profile Photo"
+          />
+        </div>
+        <div class="col-md-9" style="margin: auto">
+          <h1>Dwight Schrute</h1>
+          <h5>Freelance Web Developer</h5>
+          <p class="border-top pt-1">
+            Nato a Scranton (Pennsylvania - USA), 08/08/1995
+          </p>
+          <p class="pt-1">
+            Residente a Scranton (Pennsylvania - USA), via della vittoria 10 -
+            50060
+          </p>
+          <p class="pt-1">cell. 333-3334567</p>
+          <p class="pt-1">developer@dwightschrute.com</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <main class="container">
+      <div class="row">
+        <div class="col-md mb-5">
+          <!-- work experience -->
+        </div>
+        <div class="col-md mb-5">
+          <!-- education -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md mb-5">
+          <!-- skills -->
+        </div>
+        <div class="col-md">
+          <!-- recent work -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

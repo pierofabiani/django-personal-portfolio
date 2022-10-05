@@ -20,24 +20,6 @@
   <body>
 
 
-
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-12">.col-6 .col-sm-3</div>
-        <div class="col-lg-3 col-md-6 col-12">.col-6 .col-sm-3</div>
-        <div class="col-lg-3 col-md-6 col-12">.col-6 .col-sm-3</div>
-        <div class="col-lg-3 col-md-6 col-12">.col-6 .col-sm-3</div>
-        <div class="col-lg-3 col-md-6 col-12">.col-6 .col-sm-3</div>
-        <div class="col-lg-3 col-md-6 col-12">.col-6 .col-sm-3</div>
-
-    
-      </div>
-    </div>
-
-
-
-
-
     <!-- Barra di Navigazione -->
     <nav class="navbar bg-light sticky-top">
       <div class="container-fluid">
@@ -51,12 +33,19 @@
             class="d-inline-block align-text-top mx-3"
           />
           Dwight Schrute
-        </a>
+        </a> 
+        <div style="display: flex">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a class="btn btn-secondary me-md-2" type="button" href="{% url 'curriculum' %}"
+            >Curriculum</a
+          >
+        </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <a class="btn btn-secondary me-md-2" type="button" href="{% url 'contatti' %}"
             >Contatti</a
           >
         </div>
+      </div>
       </div>
     </nav>
     <div class="container">
