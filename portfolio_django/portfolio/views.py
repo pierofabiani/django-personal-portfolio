@@ -1,11 +1,9 @@
 from django.shortcuts import render
 from .models import cvelement
+from django.http import Http404
 
-# Import mimetypes module
 import mimetypes
-# import os module
 import os
-# Import HttpResponse module
 from django.http.response import HttpResponse
 
 
@@ -40,3 +38,13 @@ def download_file(request):
     response['Content-Disposition'] = "attachment; filename=%s" % filename
     # Return the response value
     return response
+
+
+def detail(request, cvelement_id):
+    try:
+        print('cv element id: %s' % cvelement_id)
+        # element = cvelement.objects.get(pk=cvelement_id)
+        # print('cv element: %s' % element)
+    except cvelement.DoesNotExist:
+        raise Http404("CV element does not exist")
+    return render(request, 'portfolio/detail.html', {'element': cvelement_id})

@@ -1,0 +1,7 @@
+<h1>Detail {{element}}</h1>
+
+{% if cvelement.img %}
+<img src="{{cvelement.img}}" alt="" />
+{% else %} {% load static}
+<img src="{{static 'img/palceholder.png'}}" alt="" />
+{% endif %}
