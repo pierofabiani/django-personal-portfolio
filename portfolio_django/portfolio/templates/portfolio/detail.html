@@ -1,7 +1,11 @@
-<h1>Detail {{element}}</h1>
+<h1>Mansione: {{element.nome}}</h1>
+</br>
+<h2>Descrizione:</h2>
+<p>{{ element.descrizione }}</p>
+<h2>Riassunto:</h2>
+<p>{{ element.riassunto }}</p>
 
-{% if cvelement.img %}
-<img src="{{cvelement.img}}" alt="" />
-{% else %} {% load static}
-<img src="{{static 'img/palceholder.png'}}" alt="" />
-{% endif %}
+</br>
+<p>Inizio {{ element.start }}</p>
+
+<p>Fine {{ element.end }}</p>

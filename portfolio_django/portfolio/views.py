@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from multiprocessing import context
+from django.shortcuts import get_object_or_404, render
 from .models import cvelement
 from django.http import Http404
+
 
 import mimetypes
 import os
@@ -41,10 +43,12 @@ def download_file(request):
 
 
 def detail(request, cvelement_id):
+
     try:
-        print('cv element id: %s' % cvelement_id)
-        # element = cvelement.objects.get(pk=cvelement_id)
+        # print('cv element id: %s' % cvelement_id)
+        element = cvelement.objects.get(pk=cvelement_id)
+
         # print('cv element: %s' % element)
     except cvelement.DoesNotExist:
         raise Http404("CV element does not exist")
-    return render(request, 'portfolio/detail.html', {'element': cvelement_id})
+    return render(request, 'portfolio/detail.html', {'element': element})
